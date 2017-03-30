@@ -1,0 +1,50 @@
+.container{
+    margin: 48px auto 40px;
+    padding: 0px 0 10px;
+
+    overflow: auto;
+}
+.container img{
+    width: 100px;
+    height: 100px;
+    margin-right: 10px;
+    box-shadow: 0 0 5px rgba(100, 100, 100, 0.4);
+    float: left;
+}
+.goods{
+    background-color: white;
+    padding: 6px 10px;
+    margin: 10px 0;
+    overflow: hidden;
+}
+.goods p{
+    vertical-align:  top;
+    width: calc(100% - 110px);
+    overflow: hidden;
+    text-overflow:ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient:vertical;
+    -webkit-line-clamp:2;
+
+}
+.specification{
+    margin-top: 7px;
+    color: rgb(150, 150, 150);
+    font-size: .9rem;
+}
+.promotion{
+    margin-top: 7px;
+    text-align: right;
+    line-height: 1rem;
+}
+.promotion>span{
+    float: left;
+    margin-right: 6px;
+    padding: 1px 6px;
+    background: green;
+    font-size: .8rem;
+    color: white;
+    border-radius: 2px;
+    vertical-align: baseline;
+    margin-bottom:
+}

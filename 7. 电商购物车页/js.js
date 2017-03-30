@@ -1,0 +1,14 @@
+$(document).ready(function(){
+    $(".delete").on("click",function(){
+        $(".mask").show();
+        $(".bomb_box").show();
+    });
+    $(".enter").on("click",function(){
+        $(".mask").hide();
+        $(".bomb_box").hide();
+    });
+    $(".cancel").on("click",function(){
+        $(".mask").hide();
+        $(".bomb_box").hide();
+    });
+});
