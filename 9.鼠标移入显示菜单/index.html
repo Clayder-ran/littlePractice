@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>菜单</title>
+        <link rel="stylesheet" href="css.css">
+    </head>
+    <body>
+        <div class="background">
+            <span class="arrow"></span>
+        </div>
+            <h1>Cool</h1>
+        <ul class="main">
+            <li>
+                <a href="#">About Me</a>
+                <div class="dropdown dropdown1">
+                    <img src="https://logo.clearbit.com/wesbos.com" alt="">
+                    <p>Wes Bos sure does love web development. He teaches things like JavaScript, CSS and BBQ. Wait. BBQ isn't part of web development. It should be though!</p>
+                </div>
+            </li>
+            <li>
+                <a href="#">Courses</a>
+                <div class="dropdown dropdown2">
+                    <ul>
+                        <li>RFB <a href="#">React For Beginners</a></li>
+                        <li>ES6 <a href="#">ES6 For Everyone</a></li>
+                        <li>STPU <a href="#">Sublime Text Power User</a></li>
+                        <li class="no">WTF <a href="#">What The Flexbox?!</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <a href="#">Other links</a>
+                <div class="dropdown dropdown3">
+                    <a href="#">Twitter</a>
+                    <a href="#">Facebook</a>
+                    <a href="#">Blog</a>
+                    <a href="#">Course Catalog</a>
+                </div>
+            </li>
+        </ul>
+
+    <script type="text/javascript">
+        const background = document.querySelector(".background");
+        const triggers = document.querySelectorAll(".main>li");
+
+        function show(e){
+            this.classList.add("trigger-enter");
+            setTimeout(()=>this.classList.contains("trigger-enter")&&this.classList.add("trigger-enter-active"),150);
+            background.classList.add("open");
+
+            var dropdown = this.querySelector(".dropdown");
+            var pos = dropdown.getBoundingClientRect();
+
+            background.style.setProperty("width",`${pos.width}px`);
+            background.style.setProperty("height",`${pos.height}px`);
+            background.style.setProperty("transform",`translate(${pos.left}px,${pos.top}px)`);
+
+        }
+
+        function hide(){
+            this.classList.remove("trigger-enter","trigger-enter-active");
+            background.classList.remove("open");
+        }
+
+
+        triggers.forEach(trigger => trigger.addEventListener("mouseover",show));
+        triggers.forEach(trigger => trigger.addEventListener("mouseout",hide));
+
+    </script>
+    </body>
+</html>
