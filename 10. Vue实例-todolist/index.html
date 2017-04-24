@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Vue</title>
+    <link rel="stylesheet" href="./index.css">
+    <script src="./vue.js"></script>
+</head>
+
+<body>
+    <div class="page-top">
+        <div class="page-content">
+            <h2>任务计划列表</h2>
+        </div>
+    </div>
+    <div class="main">
+        <h3 class="big-title">添加任务</h3>
+        <input type="text" class="task-input" placeholder="例如：吃饭睡觉打豆豆" v-model="todo" v-on:keyup.enter="addToDo">
+        <ul class="task-count1" v-show="list.length">
+            <li>{{ noCheckedLength }}个任务未完成</li>
+            <li class="action">
+                <a href="#all" :class="{active:visibility==='all'}">所有任务</a>
+                <a href="#unfinished" :class="{active:visibility==='unfinished'}">未完成的任务</a>
+                <a href="#finished" :class="{active:visibility==='finished'}">已完成的任务</a>
+            </li>
+        </ul>
+
+        <h3 class="big-title">任务列表</h3>
+        <div class="tasks">
+            <span class="no-task-tip" v-show="!list.length">还没有添加任何任务</span>
+            <ul class="todo-list">
+                <li class="todo" :class="{completed:item.isChecked,edit:item===edtorTodos}" v-for="item in filteredList">
+                    <div class="view">
+                        <input type="checkbox" class="toggle" v-model="item.isChecked" />
+                        <label v-on:dblclick="edtorTodo(item)">{{item.title}}</label>
+                        <button class="destroy" v-on:click="deleteTodo(item)">x</button>
+                    </div>
+                    <input type="text" class="edit" v-model="item.title" style="text-line" v-focus="edtorTodos===item" @blur="edtorTodoed" @keyup.enter="edtorTodoed" @keyup.esc="cancelTodo(item)">
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+
+    <script src="./app.js"></script>
+</body>
+
+</html>

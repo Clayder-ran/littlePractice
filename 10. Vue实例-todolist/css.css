@@ -1,0 +1,126 @@
+
+
+.completed{
+    text-decoration: line-through;
+    color: gray;
+}
+
+*{
+  margin: 0;padding: 0;
+}
+ul{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+}
+body{
+  font: normal 16px/1.4 "Microsoft yahei";
+  padding: 10px;
+  min-width: 320px;
+  max-width: 500px;
+}
+h2{
+  line-height: 3rem;
+  text-align: center;
+}
+h3{
+  font-weight: normal;
+  margin: 10px 0;
+}
+
+hr{margin: 20px 0;}
+.view+input{
+   display: none;
+}
+li.edit>input{
+   display: block;
+}
+li.edit>div{
+   display: none;
+}
+
+.addField{
+  font-size: 0;
+}
+.addField>input,.addField>button{
+  padding: 5px 10px;
+  font-family: "microsoft yahei";
+  font-size: 1rem;
+  vertical-align: middle;
+  height: 2.2rem;
+  border: 1px solid lightgray;
+}
+.addField>input{
+  width: 260px;
+}
+.addField>button{
+  border: none;
+  background: lightgray;
+}
+
+.task-count1{
+  margin: 6px 0;
+}
+.task-count1::after{
+  content:"";
+  display: block;
+  clear: both;
+}
+.task-count1>li:nth-child(1){
+  float: left;
+  color: red;
+  font-size: .9rem;
+}
+.task-count1>li.action{
+  float: right;
+}
+.action>a{
+  display: inline-block;
+  color: black;
+  font-size: .9rem;
+  background: lightgray;
+  padding: 3px 6px;
+  box-shadow: 0 0 3px gray;
+  margin-left: 3px;
+}
+
+
+.tasks{
+  max-width: 500px;
+  min-height: 120px;
+  background: rgba(242, 242, 242, 1);
+  padding: 10px 0;
+  text-align: center;
+}
+.no-task-tip{
+  color: lightgray;
+  margin-top: 40px;
+}
+
+.todo-list{
+  text-align: left;
+  padding: 10px;
+}
+
+
+.todo{
+  padding: 6px ;
+  border-radius:3px;
+}
+.todo:hover{
+  background: white;
+}
+.destroy{
+  float: right;
+  width: 16px;
+  height: 16px;
+  line-height: 12px;
+  border-radius: 50%;
+  border: 1px solid gray;
+}
+
+.completed{
+    text-decoration: line-through;
+    color: gray;
+}

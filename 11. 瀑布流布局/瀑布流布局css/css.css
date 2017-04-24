@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#main{
+    column-width: 187px;
+    /*column-count:3;*/
+    column-rule: 1px dotted red;
+    /*column-gap: 5px;*/
+}
+.box{
+    padding: 15px 0 0 15px;
+
+}
+.pic{
+    box-shadow: 0 0 3px gray;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    width: 150px;
+}
+.pic>img{
+    display: block;
+    width: 150px;
+    height: auto;
+}
